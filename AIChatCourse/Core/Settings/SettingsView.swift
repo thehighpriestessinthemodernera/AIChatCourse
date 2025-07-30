@@ -138,8 +138,7 @@ struct SettingsView: View {
             do {
                 try authService.signOut()
                 await dismissScreen()
-            }
-            catch {
+            } catch {
                 showAlert = AnyAppAlert(error: error)
             }
         }
@@ -191,7 +190,20 @@ fileprivate extension View {
     }
 }
 
-#Preview {
+#Preview("Anonymous") {
     SettingsView()
+        .environment(\.authService, MockAuthService(user: UserAuthInfo.mock(isAnonymous: true)))
+        .environment(AppState())
+}
+
+#Preview("Non-anonymous") {
+    SettingsView()
+        .environment(\.authService, MockAuthService(user: UserAuthInfo.mock(isAnonymous: false)))
+        .environment(AppState())
+}
+
+#Preview("No Auth") {
+    SettingsView()
+        .environment(\.authService, MockAuthService(user: nil))
         .environment(AppState())
 }
