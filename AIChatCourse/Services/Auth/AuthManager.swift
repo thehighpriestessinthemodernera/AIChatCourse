@@ -61,4 +61,3 @@ class AuthManager {
         case notSignedIn
     }
 }
-
