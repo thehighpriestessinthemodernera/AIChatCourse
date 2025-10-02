@@ -13,6 +13,8 @@
 		A419D4012E82C5E700A470CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A419D4002E82C5E700A470CF /* GoogleService-Info.plist */; };
 		A43F35982DC9C2C4000C6CB9 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A43F35972DC9C2C4000C6CB9 /* SDWebImageSwiftUI */; };
 		A47481BA2DDEC3AA0031B98A /* SwiftfulUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = A47481B92DDEC3AA0031B98A /* SwiftfulUtilities */; };
+		A477A2542E8DCD0F00DC7ADC /* SwiftfulFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A477A2532E8DCD0F00DC7ADC /* SwiftfulFirestore */; };
+		A477A2562E8DCE1200DC7ADC /* SwiftfulFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A477A2552E8DCE1200DC7ADC /* SwiftfulFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,7 @@
 			files = (
 				A43F35982DC9C2C4000C6CB9 /* SDWebImageSwiftUI in Frameworks */,
 				A419D3F32E82774F00A470CF /* FirebaseFirestore in Frameworks */,
+				A477A2542E8DCD0F00DC7ADC /* SwiftfulFirestore in Frameworks */,
 				A419D3F12E82774F00A470CF /* FirebaseAuth in Frameworks */,
 				A47481BA2DDEC3AA0031B98A /* SwiftfulUtilities in Frameworks */,
 				A419D3FE2E82C09F00A470CF /* SignInAppleAsync in Frameworks */,
@@ -87,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A477A2562E8DCE1200DC7ADC /* SwiftfulFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +151,7 @@
 				A419D3F02E82774F00A470CF /* FirebaseAuth */,
 				A419D3F22E82774F00A470CF /* FirebaseFirestore */,
 				A419D3FD2E82C09F00A470CF /* SignInAppleAsync */,
+				A477A2532E8DCD0F00DC7ADC /* SwiftfulFirestore */,
 			);
 			productName = AIChatCourse;
 			productReference = A4A6316D2DB9C80300D6C89F /* AIChatCourse.app */;
@@ -170,6 +175,7 @@
 			);
 			name = AIChatCourseTests;
 			packageProductDependencies = (
+				A477A2552E8DCE1200DC7ADC /* SwiftfulFirestore */,
 			);
 			productName = AIChatCourseTests;
 			productReference = A4A6317A2DB9C80700D6C89F /* AIChatCourseTests.xctest */;
@@ -235,6 +241,7 @@
 				A47481B62DDEC2D90031B98A /* XCRemoteSwiftPackageReference "SwiftfulUtilities" */,
 				A419D3EF2E82774F00A470CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A419D3FC2E82C09F00A470CF /* XCRemoteSwiftPackageReference "SignInAppleAsync" */,
+				A477A2522E8DCD0F00DC7ADC /* XCRemoteSwiftPackageReference "SwiftfulFirestore" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A4A6316E2DB9C80300D6C89F /* Products */;
@@ -675,6 +682,14 @@
 				minimumVersion = 1.1.6;
 			};
 		};
+		A477A2522E8DCD0F00DC7ADC /* XCRemoteSwiftPackageReference "SwiftfulFirestore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulFirestore";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -702,6 +717,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A47481B62DDEC2D90031B98A /* XCRemoteSwiftPackageReference "SwiftfulUtilities" */;
 			productName = SwiftfulUtilities;
+		};
+		A477A2532E8DCD0F00DC7ADC /* SwiftfulFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A477A2522E8DCD0F00DC7ADC /* XCRemoteSwiftPackageReference "SwiftfulFirestore" */;
+			productName = SwiftfulFirestore;
+		};
+		A477A2552E8DCE1200DC7ADC /* SwiftfulFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A477A2522E8DCD0F00DC7ADC /* XCRemoteSwiftPackageReference "SwiftfulFirestore" */;
+			productName = SwiftfulFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
